@@ -83,7 +83,7 @@ macro (final_target)
     file (GLOB_RECURSE TARGET_INSTALL_HEADERS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.hpp)
     foreach (hppfile ${TARGET_INSTALL_HEADERS})
       get_filename_component (currdir ${hppfile} PATH)
-      install (FILES ${hppfile} DESTINATION "include/${TARGET_NAME}/${currdir}")
+      install (FILES ${hppfile} DESTINATION "include${verDir}/${TARGET_NAME}/${currdir}")
     endforeach()
 endmacro ()
 
